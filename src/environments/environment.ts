@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  angular_api: 'https://hn.algolia.com/api/v1/search_by_date?query=angular&page=0',
+  react_api: 'https://hn.algolia.com/api/v1/search_by_date?query=reactjs&page=0',
+  vue_api: 'https://hn.algolia.com/api/v1/search_by_date?query=vuejs&page=0',
 };
 
 /*

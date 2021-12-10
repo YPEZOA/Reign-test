@@ -1,0 +1,43 @@
+.container_buttons {
+  display: flex;
+  justify-content: center;
+  .buttons-all_news {
+    cursor: pointer;
+    width: 98px;
+    height: 31px;
+    border-radius: 2px;
+    //border: solid 1px #1797ff;
+    border: 1px solid #cccc;
+    text-align: center;
+    .all {
+      width: 19px;
+      height: 28px;
+      cursor: pointer;
+      font-family:sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.75;
+      letter-spacing: normal;
+      text-align: center;
+      text-decoration: none;
+      color: #606060;
+    }
+    .my-faves {
+      width: 65px;
+      height: 28px;
+      cursor: pointer;
+      font-family: sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.75;
+      letter-spacing: normal;
+      text-align: center;
+      text-decoration: none;
+      color: #606060;
+    }
+  }
+}
