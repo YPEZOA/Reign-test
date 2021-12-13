@@ -1,2 +1,14 @@
 <div class="main-container">
+  <div class="selector-container">
+    <ng-select [clearable]="false" [placeholder]="'Seleccione..'" (change)="getTypeNews($event)">
+      <ng-option *ngFor="let lang of languages" [value]="lang">
+        <img class="icon" [src]="lang.image" alt="icon" width="24px"> {{ lang.name }}
+      </ng-option>
+    </ng-select>
+  </div>
+  <div class="news-container">
+    <div class="new" *ngFor="let new of news">
+      <small> {{ new.created_at | date: 'h' }} hours ago by {{ new.author }}</small>
+    </div>
+  </div>
 </div>

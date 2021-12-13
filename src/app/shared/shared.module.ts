@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {NavbarComponent} from './navbar/navbar.component';
 import {ButtonsFilterNewsComponent} from './buttons-filter-news/buttons-filter-news.component';
 import {RouterModule} from '@angular/router';
+import {NgSelectModule} from '@ng-select/ng-select';
 
 
 
@@ -13,8 +14,9 @@ import {RouterModule} from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgSelectModule
   ],
-  exports: [NavbarComponent, ButtonsFilterNewsComponent]
+  exports: [NavbarComponent, ButtonsFilterNewsComponent, NgSelectModule]
 })
 export class SharedModule {}

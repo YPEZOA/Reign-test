@@ -4,9 +4,7 @@
 
 export const environment = {
   production: false,
-  angular_api: 'https://hn.algolia.com/api/v1/search_by_date?query=angular&page=0',
-  react_api: 'https://hn.algolia.com/api/v1/search_by_date?query=reactjs&page=0',
-  vue_api: 'https://hn.algolia.com/api/v1/search_by_date?query=vuejs&page=0',
+  base_api: 'https://hn.algolia.com/api/v1/search_by_date?query=',
 };
 
 /*

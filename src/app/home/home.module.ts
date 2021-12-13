@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {NgSelectModule} from '@ng-select/ng-select';
+import {SharedModule} from '../shared/shared.module';
 
 
 
@@ -8,7 +8,7 @@ import {NgSelectModule} from '@ng-select/ng-select';
   declarations: [],
   imports: [
     CommonModule,
-    NgSelectModule
+    SharedModule,
   ]
 })
 export class HomeModule {}
