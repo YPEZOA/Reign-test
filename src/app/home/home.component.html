@@ -6,7 +6,8 @@
       </ng-option>
     </ng-select>
   </div>
-  <div class="news-container">
+  <i class="fas fa-circle-notch fa-spin"></i>
+  <div class="news-container" *ngIf="!loading">
     <div class="new" *ngFor="let new of news">
       <small> {{ new.created_at | date: 'h' }} hours ago by {{ new.author }}</small>
     </div>

@@ -14,6 +14,8 @@ import {HomeComponent} from './home/home.component';
 import {FavoritesComponent} from './favorites/favorites.component';
 import {SharedModule} from './shared/shared.module';
 import {HomeModule} from './home/home.module';
+import {EffectsModule} from '@ngrx/effects';
+import {EffectsArray} from './store/effects';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import {HomeModule} from './home/home.module';
     SharedModule,
     HomeModule,
     StoreModule.forRoot(appReducers),
+    EffectsModule.forRoot(EffectsArray),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: environment.production

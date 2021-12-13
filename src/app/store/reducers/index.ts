@@ -1,1 +1,1 @@
-export * from './languages.reducer'
+export * from './searchNews.reducer';

@@ -6,5 +6,5 @@ export interface AppState {
 }
 
 export const appReducers: ActionReducerMap<AppState> = {
-    searchTechnology: reducers.searchTechnologyReducer
+  searchTechnology: reducers.searchTechnologyReducer
 }
