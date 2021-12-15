@@ -1,8 +1,8 @@
-import {ActionReducerMap} from "@ngrx/store";
+import { ActionReducerMap } from "@ngrx/store";
 import * as reducers from "./reducers";
 
 export interface AppState {
-  searchTechnology: reducers.Technology
+  searchTechnology: reducers.Technology,
 }
 
 export const appReducers: ActionReducerMap<AppState> = {

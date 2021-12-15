@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { INew } from '../interface/new.interface';
 
 @Component({
   selector: 'app-favorites',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./favorites.component.scss']
 })
 export class FavoritesComponent implements OnInit {
-
-  constructor() { }
+  favorites: INew[] = []; 
+  constructor() {
+    this.favorites = JSON.parse(localStorage.getItem('my-faves') || '');
+   }
 
   ngOnInit(): void {
   }

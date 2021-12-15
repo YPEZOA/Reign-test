@@ -1,0 +1,66 @@
+.main-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-top: 50px;
+  h1 {
+    text-align: center;
+  }
+  .selector-container {
+    width: 240px;
+    .icon {
+      margin-right: 10px;
+    }
+  }
+  .icon-container {
+    text-align: center;
+    color: #cccccc;
+  }
+  .news-container {
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 7rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 35rem), 1fr));
+    .new {
+      display: flex;
+      flex-wrap: wrap;
+      width: 525px;
+      height: 90px;
+      margin: 38px 0px 30px 0px;
+      padding: 0 0 0 26px;
+      opacity: 0.8;
+      border-radius: 6px;
+      border: solid 1px #979797;
+      background-color: #fff;
+      overflow: hidden;
+      .date {
+        font-size: 12px;
+        margin-top: 7px;
+      }
+      .body-text {
+        width: 80%;
+        font-weight: 500;
+        font-size: 15px;
+        margin-top: 7px;
+        height: 40px;
+      }
+      .clock {
+        margin-right: 5px;
+        font-size: 15px;
+      }
+      .box {
+        height: 90px;
+        width: 68px;
+        margin: -26px 0 0 31px;
+        padding: 35px 22px 33px;
+        border-radius: 6px;
+        background-color: #f0f0f0;
+        .heart {
+          color: red;
+          font-size: 23px;
+          object-fit: contain;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,10 @@
-<p>favorites works!</p>
+<div class="main-container">
+  <h1 *ngIf="!favorites.length">There are not favorites yet</h1>
+  <div class="news-container" *ngIf="favorites.length">
+    <div class="new" *ngFor="let favorite of favorites">
+      <small class="date"><i class="far fa-clock clock"></i> {{ favorite.created_at | date: 'h' }} hours ago by {{ favorite.author }}</small>
+      <span class="body-text">{{ favorite.story_title ? favorite.story_title : 'No title' }}</span>
+      <div class="box"> <i class="fas fa-heart heart"></i></div>
+    </div>
+  </div>
+</div>

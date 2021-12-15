@@ -1,5 +1,5 @@
-import {Action, createReducer, on} from "@ngrx/store";
-import {INew} from "src/app/interface/new.interface";
+import { Action, createReducer, on } from "@ngrx/store";
+import { INew } from "src/app/interface/new.interface";
 import * as actions from '../actions/searchNews.actions';
 
 export interface Technology {
@@ -7,6 +7,7 @@ export interface Technology {
   news: INew[];
   loading: boolean;
   loaded: boolean;
+  likeNew: any[];
 }
 
 export const initialState: Technology = {
@@ -14,14 +15,24 @@ export const initialState: Technology = {
   news: [],
   loading: false,
   loaded: false,
+  likeNew: []
 }
 
 const _searchTechnologyReducer = createReducer(initialState,
-  on(actions.searchTechnology, (state, {text}) => ({...state, text, loading: true})),
-  on(actions.searchTechnologySuccess, (state, {news}) => ({
+  on(actions.searchTechnology, (state, { text }) => ({ ...state, text, loading: true })),
+  on(actions.searchTechnologySuccess, (state, { news }) => ({
     ...state,
     loading: false,
-    news: [...news]
+    loaded: true,
+    news
+  })),
+  on(actions.giveALike, (state, { liked }) => ({
+    ...state,
+    likeNew: [...state.likeNew, liked]
+  })),
+  on(actions.giveALikeSuccess, (state, { liked }) => ({
+    ...state,
+    likenew: liked
   })),
 )
 
