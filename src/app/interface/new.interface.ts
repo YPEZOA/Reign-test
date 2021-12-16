@@ -13,6 +13,7 @@ export interface INew {
   story_url: string;
   title: string;
   url?: string;
+  like?: boolean;
   _highlightResult?: Object;
   _tags?: Object;
 }

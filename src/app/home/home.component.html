@@ -8,10 +8,10 @@
   </div>
   <div class="icon-container" *ngIf="loading"><i class="fas fa-spinner fa-spin fa-7x"></i></div>
   <div class="news-container" *ngIf="!loading">
-    <div class="new" *ngFor="let new of news | filter: 20">
+    <div class="new" *ngFor="let new of news">
       <small class="date"><i class="far fa-clock clock"></i> {{ new.created_at | date: 'h' }} hours ago by {{ new.author }}</small>
       <span class="body-text">{{ new.story_title ? new.story_title : 'No title' }}</span>
-      <div class="box"> <i class="fas fa-heart heart" (click)="onGiveALikeNew(new)"></i></div>
+      <div class="box"> <button class="like" (click)="onGiveALikeNew(new)" [disabled]="liked"><i class="fas fa-heart heart"></i></button></div>
     </div>
   </div>
 </div>

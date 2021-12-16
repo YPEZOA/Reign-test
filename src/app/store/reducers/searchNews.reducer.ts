@@ -8,6 +8,7 @@ export interface Technology {
   loading: boolean;
   loaded: boolean;
   likeNew: any[];
+  like: boolean;
 }
 
 export const initialState: Technology = {
@@ -15,8 +16,10 @@ export const initialState: Technology = {
   news: [],
   loading: false,
   loaded: false,
-  likeNew: []
+  likeNew: [],
+  like: false,
 }
+
 
 const _searchTechnologyReducer = createReducer(initialState,
   on(actions.searchTechnology, (state, { text }) => ({ ...state, text, loading: true })),
@@ -28,11 +31,12 @@ const _searchTechnologyReducer = createReducer(initialState,
   })),
   on(actions.giveALike, (state, { liked }) => ({
     ...state,
-    likeNew: [...state.likeNew, liked]
+    likeNew: [...state.likeNew, liked],
+    like: true
   })),
   on(actions.giveALikeSuccess, (state, { liked }) => ({
     ...state,
-    likenew: liked
+    likenew: liked,
   })),
 )
 

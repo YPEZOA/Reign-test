@@ -57,11 +57,25 @@
           font-size: 23px;
           object-fit: contain;
           cursor: pointer;
-          &::after {
-            color: blue;
+          z-index: 0;
+          &:hover {
+            transform-origin: center;
+            animation: latidos .5s infinite;
           }
+          &:active {
+            animation: none;
+          }
+        }
+        .like {
+          border: none;
         }
       }
     }
   }
+}
+
+@keyframes latidos {
+  from { transform: none; }
+  50% { transform: scale(1.2); }
+  to { transform: none; }
 }

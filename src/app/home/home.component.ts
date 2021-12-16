@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   selectLanguage: FormControl;
   searchSubscription: Subscription = new Subscription();
   emptyList!: boolean;
+  liked!: boolean;
   newFave!: INew;
   page: number = 0;
   loading: boolean = false;
@@ -34,7 +35,6 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.searchSubscription = this.store.select('searchTechnology').subscribe(resp => {
-      console.log(resp);
       localStorage.setItem('filters', JSON.stringify(resp));
       localStorage.setItem('my-faves', JSON.stringify(resp.likeNew));
       this.news = resp.news;

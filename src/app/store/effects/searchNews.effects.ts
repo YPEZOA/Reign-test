@@ -25,7 +25,9 @@ export class SearchNewsEffects {
       ofType(searchActions.giveALike),
       // El merge siempre debe retornar un observable
       mergeMap(action => of(action.liked).pipe(
-        map(newSelected => searchActions.giveALikeSuccess({ liked: newSelected })),
+        map(newSelected => {
+          return searchActions.giveALikeSuccess({ liked: newSelected })
+        }),
         catchError(err => of(console.log('error'), err)),
       )),
     )
